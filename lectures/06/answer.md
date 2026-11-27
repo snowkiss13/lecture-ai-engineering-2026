@@ -14,7 +14,7 @@
 
 <!-- 基礎・実装・発展のどれか1つに取り組めば完了です。 -->
 
-- 取り組んだレベル：基礎 / 実装 / 発展
-- やったこと：
-- 結果：
-- 気づき・疑問：
+- 取り組んだレベル：基礎
+- やったこと：app/mcp_server.py に server.tool()(tools.get_lecture_summary) を1行追加し、get_lecture_summary を MCP サーバーに公開した。
+- 結果：ツール一覧に glossary_get_lecture_summary が表示された（全8個）。「第2回では何を学びますか？」に glossary_get_lecture_summary を使って第2回「ファインチューニングとLoRA」の要約で答えた。uv run pytest -q は 21 passed。
+- 気づき・疑問：ツール公開は1行で済んだが、モデルがそのツールを使うかは質問とツールの説明次第だと分かった。STEP 4 では同じ質問に search_glossary が使われ、公開後は get_lecture_summary が使われた。
